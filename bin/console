@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+require 'm1key_gallery_generator'
+require 'erb'
+
+include GalleryGenerator
+
+OUTPUT_FILE = 'index.html'
+DEFAULT_GALLERY_CONFIG_FILE = 'gallery.yaml'
+
+puts 'M1key.me Gallery Generator 0.1.0'
+puts 'www.m1key.me'
+puts 'This generates a m1key.me style gallery HTML code.'
+puts
+
+if ARGV.size == 0
+  working_directory = Dir.pwd
+  puts "Working directory not specified. Using [#{working_directory}]."
+else
+  working_directory = ARGV[0]
+  puts "Using working directory [#{working_directory}]."
+end
+
+puts
+
+gallery_config = GalleryConfig.new(File.join(working_directory, DEFAULT_GALLERY_CONFIG_FILE))
+viewable_photos = photos_config_into_viewable_photos(working_directory, gallery_config)
+
+puts 'Creating viewable gallery...'
+
+gallery = ViewableGallery.new(gallery_config.title, gallery_config.description, gallery_config.slug, \
+  gallery_config.sources, gallery_config.upload_date, gallery_config.map_url, gallery_config.map_title, \
+  gallery_config.year, viewable_photos).
+    update_using( \
+    add_tabs_before_every_description_line(2), \
+    add_links_to_descriptions, \
+    for_each_photo(&add_tabs_before_every_description_line(3)), \
+    for_each_photo(&add_links_to_descriptions), \
+    for_each_photo(&remove_final_empty_line_from_description))
+
+puts 'Preparing to write the output...'
+
+output_file = File.join(working_directory, OUTPUT_FILE)
+puts "Writing gallery file #{output_file}..."
+template_file = File.open("#{File.dirname(File.expand_path($0))}/../lib/m1key_gallery_generator/template.erb", 'r').read
+erb = ERB.new(template_file, nil, '-')
+File.open(output_file, 'w+') { |file| file.write(erb.result(gallery.get_binding)) }
+
+puts "#{output_file} written."
+

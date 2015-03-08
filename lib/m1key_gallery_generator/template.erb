@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><%= title %> - Photography - M1key - Michal Huniewicz</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<meta name="description" content="<%= title %> - Photography - M1key - Michal Huniewicz's Personal Website" />
+	<meta name="keywords" content="huniewicz, michal huniewicz, m1key, programming, java, scala, jee, photography, blog" />
+	<meta name="author" content="Michal Huniewicz" />
+	<style type="text/css" media="all">@import "../../styles/base.css";</style>
+	<link rel="shortcut icon" href="../../images/icon.ico" />
+	<link rel="alternate" type="application/atom+xml" title="blog.m1key.me - Atom" href="http://blog.m1key.me/feeds/posts/default" />
+	<link rel="alternate" type="application/rss+xml" title="blog.m1key.me - RSS" href="http://blog.m1key.me/feeds/posts/default?alt=rss" />
+	<script type="text/javascript" src="../../scripts/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="../../scripts/photo-warning.js"></script>
+</head>
+<body>
+
+<div id="biggerContainer">
+	<div class="navigation">
+		<a href="../">&lt; Back to Photography</a><br />
+		<a href="../../">&lt; &lt; Back to M1key.me</a>
+	</div>
+
+	<h1><%= title %> Photography - M1key - Michal Huniewicz</h1>
+	<img src="<%= slug %>_title.jpg" alt="<%= title %> by Michal Huniewicz" id="homepageImage" />
+	<div class="information">
+<%= description -%>
+		<p class="smallprint">
+			<a name="sources">Sources</a>:<% sources.each_with_index do |source, index| %>
+			<a href="<%= source %>"><%= index + 1 %></a><% if (index + 1) < sources.size %>,<% else %>.<% end -%>
+			<% end %>
+			<br />
+			Uploaded on: <%= upload_date %>.
+		</p>
+	</div>
+	<div class="map">
+		<a href="<%= map_url %>">
+			<img src="<%= slug %>_map.png" alt="<%= map_title %>" title="<%= map_title %>" /></a>
+	</div>
+
+	<% photos.each do |photo| %>
+	<h2><%= photo.title %></h2>
+	<div class="photo">
+		<div class="title">
+			<a name="<%= photo.id %>" href="#<%= photo.id %>" title="Link to this photo"><strong><%= photo.title %></strong></a>
+		</div>
+		<div style="height: <%= photo.metadata.height %>px" class="imageContainer">
+			<img src="<%= slug %>_<%= photo.id %>.jpg" alt="<%= photo.title %>" />
+		</div>
+		<div class="description">
+<%= photo.description %>
+		</div>
+		<div class="technical">
+			ISO <%= photo.metadata.iso %>, <%= photo.metadata.focal_length %>mm, f/<%= photo.metadata.f_number %>, <%= photo.metadata.exposure_time %>s. <%= photo.technical_info %>
+		</div>
+	</div>
+	<% end %>
+	
+	<div class="navigation">
+		<a href="../">&lt; Back to Photography</a><br />
+		<a href="../../">&lt; &lt; Back to M1key.me</a>
+	</div>
+	<div id="footer">
+		<hr />
+		<a href="http://www.m1key.me">M1key.me</a> -
+		<a href="http://blog.m1key.me">Blog</a> -
+		<a href="../../photography/">Photography</a> -
+		<a href="http://www.panoramio.com/user/2266392">Panoramio</a> -
+		<a href="http://nl.linkedin.com/in/michalhuniewicz">LinkedIn</a> -
+		<a href="https://www.facebook.com/Michal.Huniewicz">My Fan Page</a> -
+		<a href="../../about_me/">About me</a><br />
+		&copy;<%= year %> Michal Huniewicz, www.m1key.me
+	</div>
+</div>
+
+</body>
+</html>
+
