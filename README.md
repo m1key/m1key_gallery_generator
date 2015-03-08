@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-> ruby -Ilib bin/gallery_generator test/data
+> ruby -Ilib bin/m1key_gallery_generator test/data
 
 This assumes there is a valid gallery.yaml file present in the current folder,
 and the photos themselves in the format DSC_1234.jpg.
@@ -48,12 +48,12 @@ To run the rspec tests:
 ## Gem
 
 To build gem:
-> gem build gallery_generator.gemspec
+> gem build m1key_gallery_generator.gemspec
 
 To install gem:
-> gem install gallery_generator-0.0.7.gem
+> gem install m1key_gallery_generator-0.1.0.gem
 
 To test gem:
 > irb
 
-> require 'gallery_generator'
+> require 'm1key_gallery_generator'
