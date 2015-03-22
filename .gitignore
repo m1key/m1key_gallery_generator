@@ -12,6 +12,7 @@ uzbekistan*
 /tmp/
 .idea
 *.iml
+.rakeTasks
 
 ## Specific to RubyMotion:
 .dat*

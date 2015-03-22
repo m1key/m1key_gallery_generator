@@ -1,0 +1,38 @@
+title: Uzbekistan
+slug: uzbekistan
+year: 2015 
+map:
+        url: https://www.google.co.uk/maps/place/Samarkand,+Uzbekistan/@39.9108825,38.9307777,4z/data=!4m2!3m1!1s0x3f4d191960077df7:0x487636d9d13f2f57?hl=en
+        title: Samarkand, Uzbekistan
+description: |
+        <p>
+                These are my photos from Uzbekistan. [1]
+        </p>
+        <p>
+                Hope you like them!
+        </p>
+upload_date: 2014-12-11
+
+sources:
+        - https://en.wikipedia.org/wiki/Uzbekistan
+        - https://en.wikipedia.org/wiki/Tashkent
+        - https://en.wikipedia.org/wiki/Samarkand
+        - http://rspec.info/
+        - http://www.m1key.me
+        - http://www.google.com
+        - http://zodiaclung.com
+        - http://en.wikipedia.org/wiki/Monster_Magnet
+        - http://en.wikipedia.org/wiki/Dave_Wyndorf
+        - http://www.toolband.com/
+
+photos:
+        - title: Welcome to Tashkent!
+          description: |
+                This is the first [1] photo I took in Tashkent. [2]
+                Tashkent is amazing. [2]
+          fileNameContains: "5122"
+          technicalInfo: Using a tripod.
+        - title: Next Photo
+          description: |
+                Next photo
+          fileNameContains: "5123"
