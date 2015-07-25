@@ -2,8 +2,8 @@ require_relative 'string_utils'
 
 module GalleryGenerator
   class ViewableGallery
-    attr_reader :title, :description, :slug, :sources, :upload_date, :map_url, :map_title, :year, :photos
-    def initialize(title, description, slug, sources, upload_date, map_url, map_title, year, viewable_photos)
+    attr_reader :title, :description, :slug, :sources, :upload_date, :map_url, :map_title, :year, :photos, :small_print
+    def initialize(title, description, slug, sources, upload_date, map_url, map_title, year, viewable_photos, small_print)
       @title = String.new(title)
       @description = description
       @slug = slug
@@ -13,6 +13,7 @@ module GalleryGenerator
       @map_title = map_title
       @year = year
       @photos = viewable_photos
+      @small_print = small_print
     end
 
     def get_binding
@@ -28,7 +29,7 @@ module GalleryGenerator
 
       return ViewableGallery.new(updated_gallery.title, updated_gallery.description, updated_gallery.slug, \
           updated_gallery.sources, updated_gallery.upload_date, updated_gallery.map_url, \
-          updated_gallery.map_title, updated_gallery.year, to_viewable_photos(updated_gallery.photos))
+          updated_gallery.map_title, updated_gallery.year, to_viewable_photos(updated_gallery.photos), updated_gallery.small_print)
     end
 
     def to_viewable_photos(mutable_viewable_photos)
@@ -40,7 +41,7 @@ module GalleryGenerator
   end
 
   class MutableViewableGallery
-    attr_accessor :title, :description, :slug, :sources, :upload_date, :map_url, :map_title, :year, :photos
+    attr_accessor :title, :description, :slug, :sources, :upload_date, :map_url, :map_title, :year, :photos, :small_print
     def initialize(viewable_gallery)
       @title = viewable_gallery.title
       @description = viewable_gallery.description
@@ -51,6 +52,7 @@ module GalleryGenerator
       @map_title = viewable_gallery.map_title
       @year = viewable_gallery.year
       @photos = to_mutable_viewable_photos(viewable_gallery.photos)
+      @small_print = viewable_gallery.small_print
     end
 
     def to_mutable_viewable_photos(viewable_photos)

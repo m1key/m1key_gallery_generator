@@ -29,7 +29,9 @@
 		<p class="smallprint">
 			<a name="sources">Sources</a>:<% sources.each_with_index do |source, index| %>
 			<a href="<%= source %>"><%= index + 1 %></a><% if (index + 1) < sources.size %>,<% else %>.<% end -%>
-			<% end %>
+			<% end %><% if small_print.to_s != '' %>
+			<br />
+			<%= small_print -%><% end %>
 			<br />
 			Uploaded on: <%= upload_date %>.
 		</p>
