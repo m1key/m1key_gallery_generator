@@ -51,7 +51,7 @@ To build gem:
 > gem build m1key_gallery_generator.gemspec
 
 To install gem:
-> gem install m1key_gallery_generator-0.1.2.gem
+> gem install m1key_gallery_generator-0.1.3.gem
 
 To test gem:
 > irb

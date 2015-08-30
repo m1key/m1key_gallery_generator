@@ -10,7 +10,7 @@ describe ViewableGallery do
     @original_title = 'Original Title'
     @viewable_gallery_original = ViewableGallery.new(@original_title, 'Gallery description', 'gallery', \
       [], Time.now, "http://www.google.com/map/1", "Map Title", \
-      "2015", [])
+      "2015", [], "")
   end
 
   def change_title(new_title)
