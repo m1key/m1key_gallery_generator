@@ -1,4 +1,4 @@
-require 'exifr'
+require 'exifr/jpeg'
 require 'fileutils'
 require_relative 'viewable_photo_metadata'
 
@@ -48,7 +48,7 @@ module GalleryGenerator
     if selected_file_name == ''
       raise "ERROR  No matching photo found for #{photo_file_name_contains}."
     end
- 
+
     exif = EXIFR::JPEG.new(File.join(working_directory, selected_file_name))
     photo_height = exif.height
     photo_iso = exif.iso_speed_ratings
