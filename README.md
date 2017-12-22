@@ -26,7 +26,7 @@ Install dependencies:
 
 Run the script on some test data. This is required to run other tests.
 This assumes there is a valid gallery.yaml file present in the current folder,
-and the photos themselves in the format DSC_1234.jpg. 
+and the photos themselves in the format DSC_1234.jpg.
 This is required to build tests.
 
 > ruby -Ilib bin/console test/data
@@ -47,7 +47,9 @@ To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Release
 
-To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release` to create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+To release a new version, update the version number in `version.rb`,
+and then run `bundle exec rake release` to create a git tag for the version,
+push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ### Gem
 
@@ -77,3 +79,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install m1key_gallery_generator
+
+## Gotchas
+
+If editing the templates in Atom, you must switch off "Ensure Single Trailing
+Newline": https://stackoverflow.com/questions/30403150/atom-text-editor-remove-trailing-whitespace-on-save

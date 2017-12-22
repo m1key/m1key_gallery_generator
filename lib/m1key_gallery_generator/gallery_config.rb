@@ -52,7 +52,7 @@ module GalleryGenerator
     end
 
     def photo_id_digits
-      total_photos_number.to_s.size
+      [2, total_photos_number.to_s.size].max
     end
   end
 end
