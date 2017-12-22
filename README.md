@@ -12,6 +12,8 @@ This is work in progress, but has been used to generate real-life galleries.
 
 ### For Development
 
+This assumes you are running Fedora.
+
 Install Ruby:
 
 > dnf install ruby
@@ -38,6 +40,26 @@ Run other tests:
 > rake
 
 > rspec spec
+
+### For Usage
+
+This assumes you are running Windows.
+
+Install Ruby from https://rubyinstaller.org/downloads/
+
+Clone the project.
+
+Build the gem.
+
+> gem build m1key_gallery_generator.gemspec
+
+Install the gem.
+
+> gem install m1key_gallery_generator-0.1.5.gem
+
+In your gallery directory, have a file called generate.bat that looks like this:
+
+> ruby c:\Ruby24-x64\lib\ruby\gems\2.4.0\gems\m1key_gallery_generator-0.1.5\bin\console . wait_on_error
 
 ## Development
 
