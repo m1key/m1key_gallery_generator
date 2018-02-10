@@ -70,10 +70,6 @@ commit your changes,
 and then run `bundle exec rake release` to create a git tag for the version,
 push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
-### Build
-
-To install this gem onto your local machine, run `bundle exec rake install`.
-
 ### Gem
 
 To build gem:
