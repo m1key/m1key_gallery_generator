@@ -55,23 +55,24 @@ Build the gem.
 
 Install the gem.
 
-> gem install m1key_gallery_generator-0.1.5.gem
+> gem install m1key_gallery_generator-0.1.6.gem
 
 In your gallery directory, have a file called generate.bat that looks like this:
 
-> ruby c:\Ruby24-x64\lib\ruby\gems\2.4.0\gems\m1key_gallery_generator-0.1.5\bin\console . wait_on_error
+> ruby c:\Ruby24-x64\lib\ruby\gems\2.4.0\gems\m1key_gallery_generator-0.1.6\bin\console . wait_on_error
 
 ## Development
-
-### Build
-
-To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Release
 
 To release a new version, update the version number in `version.rb`,
+commit your changes,
 and then run `bundle exec rake release` to create a git tag for the version,
 push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+
+### Build
+
+To install this gem onto your local machine, run `bundle exec rake install`.
 
 ### Gem
 
@@ -79,7 +80,7 @@ To build gem:
 > gem build m1key_gallery_generator.gemspec
 
 To install gem:
-> gem install m1key_gallery_generator-0.1.5.gem
+> gem install m1key_gallery_generator-0.1.6.gem
 
 To test gem:
 > irb
