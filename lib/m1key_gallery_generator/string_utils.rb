@@ -20,7 +20,7 @@ module GalleryGenerator
     index = 1
     multi_line_string.each_line do |line|
       if index == multi_line_string.lines.count
-        line_with_empty_line_removed =  line.sub(/[\r\n|\r|\n]$/, '')
+        line_with_empty_line_removed =  line.sub(/[\r|\n]$/, '')
         result += line_with_empty_line_removed
       else
         result += line
@@ -39,4 +39,3 @@ module GalleryGenerator
     return result
   end
 end
-
