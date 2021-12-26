@@ -12,7 +12,9 @@ This is work in progress, but has been used to generate real-life galleries.
 
 ### For Development
 
-This assumes you are running Fedora.
+#### Fedora
+
+This assumes you are running Fedora, was tested around Fedora 30.
 
 Install Ruby:
 
@@ -22,9 +24,31 @@ Install Ruby Gem Bundler:
 
 > dnf install rubygem-bundler
 
+#### Ubuntu
+
+Install Ruby using rbenv. Then:
+
+> rbenv install 3.0.3
+
+> rbenv global 3.0.3
+
+> gem install bundler
+
+#### Windows
+
+Install Ruby. This only works in Ruby 2+ for now.
+
+Install Gitbash.
+
+> gem install bundler
+
+#### All
+
 Install dependencies:
 
 > ./bin/setup
+
+### Tests
 
 Run the script on some test data. This is required to run other tests.
 This assumes there is a valid gallery.yaml file present in the current folder,
@@ -32,8 +56,6 @@ and the photos themselves in the format DSC_1234.jpg.
 This is required to build tests.
 
 > ruby -Ilib bin/console test/data
-
-### Tests
 
 Run other tests:
 
