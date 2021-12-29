@@ -20,7 +20,13 @@ Install Ruby:
 
 > dnf install ruby
 
-Install Ruby Gem Bundler:
+Install Ruby Gem Bundler in Fedora 35 and higher:
+
+> gem install bundler
+
+> dnf install ruby-irb
+
+Install Ruby Gem Bundler in Fedora 30 and lower:
 
 > dnf install rubygem-bundler
 
@@ -77,11 +83,11 @@ Build the gem.
 
 Install the gem.
 
-> gem install m1key_gallery_generator-0.1.7.gem
+> gem install m1key_gallery_generator-0.1.8.gem
 
 In your gallery directory, have a file called generate.bat that looks like this:
 
-> ruby c:\Ruby26-x64\lib\ruby\gems\2.6.0\gems\m1key_gallery_generator-0.1.7\bin\console . wait_on_error
+> ruby c:\Ruby26-x64\lib\ruby\gems\2.6.0\gems\m1key_gallery_generator-0.1.8\bin\console . wait_on_error
 
 ## Development
 
@@ -98,7 +104,7 @@ To build gem:
 > gem build m1key_gallery_generator.gemspec
 
 To install gem:
-> gem install m1key_gallery_generator-0.1.7.gem
+> gem install m1key_gallery_generator-0.1.8.gem
 
 To test gem:
 > irb
