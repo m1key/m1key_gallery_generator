@@ -10,11 +10,7 @@ This is work in progress, but has been used to generate real-life galleries.
 
 ## Set up
 
-### For Development
-
-#### Fedora
-
-This assumes you are running Fedora, was tested around Fedora 30.
+### Fedora 35+
 
 Install Ruby:
 
@@ -26,11 +22,8 @@ Install Ruby Gem Bundler in Fedora 35 and higher:
 
 > dnf install ruby-irb
 
-Install Ruby Gem Bundler in Fedora 30 and lower:
 
-> dnf install rubygem-bundler
-
-#### Ubuntu
+### Ubuntu
 
 Install Ruby using rbenv. Then:
 
@@ -40,7 +33,7 @@ Install Ruby using rbenv. Then:
 
 > gem install bundler
 
-#### Windows
+### Windows
 
 Install Ruby. This only works in Ruby 2+ for now.
 
@@ -48,13 +41,13 @@ Install Gitbash.
 
 > gem install bundler
 
-#### All
+### All
 
 Install dependencies:
 
 > ./bin/setup
 
-### Tests
+## Tests
 
 Run the script on some test data. This is required to run other tests.
 This assumes there is a valid gallery.yaml file present in the current folder,
@@ -69,11 +62,9 @@ Run other tests:
 
 > rspec spec
 
-### For Usage
+## Usage
 
 This assumes you are running Windows.
-
-Install Ruby from https://rubyinstaller.org/downloads/
 
 Clone the project.
 
@@ -91,7 +82,7 @@ In your gallery directory, have a file called generate.bat that looks like this:
 
 ## Development
 
-## Release
+### Release
 
 To release a new version, update the version number in `version.rb`,
 commit your changes,
