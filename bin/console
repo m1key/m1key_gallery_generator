@@ -45,7 +45,7 @@ begin
   output_file = File.join(working_directory, OUTPUT_FILE)
   puts "Writing gallery file #{output_file}..."
   template_file = File.open("#{File.dirname(File.expand_path($0))}/../lib/m1key_gallery_generator/template.erb", 'r').read
-  erb = ERB.new(template_file, nil, '-')
+  erb = ERB.new(template_file, trim_mode: '-')
   File.open(output_file, 'w+') { |file| file.write(erb.result(gallery.get_binding)) }
 
   puts "#{output_file} written."
