@@ -120,5 +120,4 @@ Or install it yourself as:
 
 ## Gotchas
 
-If editing the templates in Atom, you must switch off "Ensure Single Trailing
-Newline": https://stackoverflow.com/questions/30403150/atom-text-editor-remove-trailing-whitespace-on-save
+Do not edit the templates in Atom due to its whitespace magic. I used vi instead.
