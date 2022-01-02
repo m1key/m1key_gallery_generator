@@ -27,15 +27,15 @@ Install Ruby Gem Bundler in Fedora 35 and higher:
 
 Install Ruby using rbenv. Then:
 
-> rbenv install 3.0.3
+> rbenv install 3.1.0
 
-> rbenv global 3.0.3
+> rbenv global 3.1.0
 
 > gem install bundler
 
 ### Windows
 
-Install Ruby. This only works in Ruby 2+ for now.
+Install Ruby. This has been most recently tested on Ruby 3.1.0.
 
 Install Gitbash.
 
@@ -52,7 +52,7 @@ Install dependencies:
 Run the script on some test data. This is required to run other tests.
 This assumes there is a valid gallery.yaml file present in the current folder,
 and the photos themselves in the format DSC_1234.jpg.
-This is required to build tests.
+*This is required to run tests.*
 
 > ruby -Ilib bin/console test/data
 
@@ -74,11 +74,11 @@ Build the gem.
 
 Install the gem.
 
-> gem install m1key_gallery_generator-0.1.8.gem
+> gem install m1key_gallery_generator-0.2.0.gem
 
 In your gallery directory, have a file called generate.bat that looks like this:
 
-> ruby c:\Ruby26-x64\lib\ruby\gems\2.6.0\gems\m1key_gallery_generator-0.1.8\bin\console . wait_on_error
+> ruby c:\Ruby31-x64\lib\ruby\gems\3.1.0\gems\m1key_gallery_generator-0.2.0\bin\console . wait_on_error
 
 ## Development
 
@@ -95,7 +95,7 @@ To build gem:
 > gem build m1key_gallery_generator.gemspec
 
 To install gem:
-> gem install m1key_gallery_generator-0.1.8.gem
+> gem install m1key_gallery_generator-0.2.0.gem
 
 To test gem:
 > irb

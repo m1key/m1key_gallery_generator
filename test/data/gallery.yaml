@@ -1,6 +1,6 @@
 title: Uzbekistan
 slug: uzbekistan
-year: 2015 
+year: 2015
 map:
         url: https://www.google.co.uk/maps/place/Samarkand,+Uzbekistan/@39.9108825,38.9307777,4z/data=!4m2!3m1!1s0x3f4d191960077df7:0x487636d9d13f2f57?hl=en
         title: Samarkand, Uzbekistan
@@ -11,7 +11,7 @@ description: |
         <p>
                 Hope you like them!
         </p>
-upload_date: 2014-12-11
+upload_date: '2014-12-11'
 small_print: Thanks to my dad!
 sources:
         - https://en.wikipedia.org/wiki/Uzbekistan
@@ -35,11 +35,10 @@ photos:
         - title: Night out in Bukhara
           description: Photo taken at night in Bukhara. [3]
           fileNameContains: "0041"
-          technicalInfo: 
+          technicalInfo:
         - title: Samarkand
           description: Samarkand [1] is amazing! [10]
           fileNameContains: "8989"
         - title: Iceland
           description: What's Iceland doing here?
           fileNameContains: "3302"
-
