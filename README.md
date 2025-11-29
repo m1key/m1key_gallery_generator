@@ -2,7 +2,7 @@
 
 This Ruby script generates www.m1key.me style gallery.
 
-A sample gallery is this: http://www.m1key.me/photography/mauritania_part_2/
+A sample gallery is this: https://www.m1key.me/photography/mauritania_part_2/
 
 ## Status
 
