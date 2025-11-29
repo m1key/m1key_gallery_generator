@@ -1,5 +1,4 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'm1key_gallery_generator/version'
 
@@ -8,10 +7,9 @@ Gem::Specification.new do |spec|
   spec.version       = M1keyGalleryGenerator::VERSION
   spec.authors       = ['Mike Huniewicz']
   spec.email         = ['REDACTED']
+  spec.required_ruby_version = '>= 3.0'
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = 'http://mygemserver.com'
-  end
+  spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
   spec.summary       = 'm1key.me-style gallery generator.'
   spec.description   = 'This gem allows you to generate a m1key.me-style gallery based on the JPG files in the working directory.'
@@ -23,10 +21,10 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'exifr', '~> 1.4.1'
+  spec.add_runtime_dependency 'exifr', '~> 1.4', '>= 1.4.0'
 
-  spec.add_development_dependency 'bundler', '~> 2.7.2'
-  spec.add_development_dependency 'rake', '~> 13.2.1'
-  spec.add_development_dependency 'minitest', '~> 5.15.0'
-  spec.add_development_dependency 'rspec', '~> 3.13.2'
+  spec.add_development_dependency 'bundler', '>= 2.0'
+  spec.add_development_dependency 'rake', '~> 13.0'
+  spec.add_development_dependency 'minitest', '~> 5.15'
+  spec.add_development_dependency 'rspec', '~> 3.13'
 end

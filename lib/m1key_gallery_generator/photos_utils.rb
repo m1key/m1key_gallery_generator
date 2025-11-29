@@ -28,26 +28,13 @@ module GalleryGenerator
   end
 
   def to_photo_id(current_photo_number, photo_id_digits)
-    photo_id = "#{current_photo_number}"
-    while photo_id.size < photo_id_digits
-      photo_id = '0' + photo_id
-    end
-    photo_id
+    current_photo_number.to_s.rjust(photo_id_digits, '0')
   end
 
   def get_metadata_for_image_with_file_name_containing(working_directory, file_name_contains)
-    selected_file_name = ''
-    Dir.entries(working_directory).each do |file_name|
-      if file_name.include? file_name_contains.to_s
-        unless selected_file_name == ''
-          puts "WARN  More than one file name matches [#{file_name_contains}]. Will use the last one that matches."
-        end
-        selected_file_name = file_name
-      end
-    end
-    if selected_file_name == ''
-      raise "ERROR  No matching photo found for #{photo_file_name_contains}."
-    end
+    selected_file_name = Dir.entries(working_directory).find { |file_name| file_name.include?(file_name_contains.to_s) }
+
+    raise "ERROR  No matching photo found for #{file_name_contains}." unless selected_file_name
 
     exif = EXIFR::JPEG.new(File.join(working_directory, selected_file_name))
     photo_height = exif.height
@@ -59,6 +46,6 @@ module GalleryGenerator
   end
 
   def create_gallery_image(original_file_name, gallery_slug, photo_id, working_directory)
-    FileUtils.cp(File.join(working_directory, original_file_name), File.join(working_directory, gallery_slug + '_' + photo_id + File.extname(original_file_name)))
+    FileUtils.cp(File.join(working_directory, original_file_name), File.join(working_directory, "#{gallery_slug}_#{photo_id}#{File.extname(original_file_name)}"))
   end
 end
