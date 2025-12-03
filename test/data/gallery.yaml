@@ -2,15 +2,15 @@ title: Uzbekistan
 slug: uzbekistan
 year: 2015
 map:
-        url: https://www.google.co.uk/maps/place/Samarkand,+Uzbekistan/@39.9108825,38.9307777,4z/data=!4m2!3m1!1s0x3f4d191960077df7:0x487636d9d13f2f57?hl=en
+        url: https://www.openstreetmap.org/search?query=samarkand%2C+uzbekistan&zoom=19&minlon=-0.07627665996551515&minlat=51.55093186854235&maxlon=-0.07335305213928224&maxlat=51.55222109657971#map=12/39.6714/66.9410
         title: Samarkand, Uzbekistan
 description: |
-        <p>
-                These are my photos from Uzbekistan. [1]
-        </p>
-        <p>
-                Hope you like them!
-        </p>
+  <p>
+    These are my photos from Uzbekistan. [1]
+  </p>
+  <p>
+    Hope you like them!
+  </p>
 upload_date: '2014-12-11'
 small_print: Thanks to my dad!
 sources:

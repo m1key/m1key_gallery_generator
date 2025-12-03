@@ -52,30 +52,40 @@
 
 <body>
 
-<div id="biggerContainer">
-	<div class="navigation">
-		<a href="../">&lt; Back to Photography</a><br />
-		<a href="../../">&lt; &lt; Back to M1key.me</a>
-	</div>
+  <main class="bigger-container">
+    <nav class="navigation" aria-label="Gallery navigation">
+      <ul>
+        <li><a href="../" class="nav-link">&lt; Back to Photography</a></li>
+        <li><a href="../../" class="nav-link">&lt;&lt; Back to M1key.me</a></li>
+      </ul>
+    </nav>
 
-	<h1><%= title %> Photography - M1key - Michal Huniewicz</h1>
-	<img src="<%= slug %>_title.jpg" alt="<%= title %> by Michal Huniewicz" id="homepageImage" />
-	<div class="information">
+    <header class="site-header">
+      <h1 class="page-title"><%= title %> by Michal Huniewicz</h1>
+    </header>
+
+    <section class="information" aria-labelledby="info-heading">
+      <h2 id="info-heading" class="visually-hidden">About this shoot</h2>
 <%= description -%>
-		<p class="smallprint">
-			<a name="sources">Sources</a>:<% sources.each_with_index do |source, index| %>
-			<a href="<%= source %>"><%= index + 1 %></a><% if (index + 1) < sources.size %>,<% else %>.<% end -%>
-			<% end %><% if small_print.to_s != '' %>
-			<br />
-			<%= small_print -%><% end %>
-			<br />
-			Uploaded on: <%= upload_date %>.
-		</p>
-	</div>
-	<div class="map">
-		<a href="<%= map_url %>">
-			<img src="<%= slug %>_map.png" alt="<%= map_title %>" title="<%= map_title %>" /></a>
-	</div>
+      
+      <p class="smallprint">
+        <span id="sources">Sources</span>:<% sources.each_with_index do |source, index| %>
+		  <a href="<%= source %>"><%= index + 1 %></a><% if (index + 1) < sources.size %>,<% else %>.<% end -%>
+		  <% end %>
+      </p>
+<% if small_print.to_s != '' %>
+      <p><%= small_print -%></p><% end %>
+      <p class="smallprint">Uploaded on: <%= upload_date %>.</p>
+    </section>
+
+    <figure class="map">
+      <a href="<%= map_url %>"
+        target="_blank" rel="noopener noreferrer">
+        <img src="<%= slug %>_map.png" alt="Map showing <%= map_title %> location (opens in OpenStreetMap)"
+          title="<%= map_title %>" width="320" height="240" />
+      </a>
+      <figcaption class="visually-hidden">Map showing <%= map_title %> location (opens in OpenStreetMap)</figcaption>
+    </figure>
 
 	<% photos.each do |photo| %>
 	<h2><%= photo.title %></h2>

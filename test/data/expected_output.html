@@ -52,43 +52,53 @@
 
 <body>
 
-<div id="biggerContainer">
-	<div class="navigation">
-		<a href="../">&lt; Back to Photography</a><br />
-		<a href="../../">&lt; &lt; Back to M1key.me</a>
-	</div>
+  <main class="bigger-container">
+    <nav class="navigation" aria-label="Gallery navigation">
+      <ul>
+        <li><a href="../" class="nav-link">&lt; Back to Photography</a></li>
+        <li><a href="../../" class="nav-link">&lt;&lt; Back to M1key.me</a></li>
+      </ul>
+    </nav>
 
-	<h1>Uzbekistan Photography - M1key - Michal Huniewicz</h1>
-	<img src="uzbekistan_title.jpg" alt="Uzbekistan by Michal Huniewicz" id="homepageImage" />
-	<div class="information">
+    <header class="site-header">
+      <h1 class="page-title">Uzbekistan by Michal Huniewicz</h1>
+    </header>
+
+    <section class="information" aria-labelledby="info-heading">
+      <h2 id="info-heading" class="visually-hidden">About this shoot</h2>
 		<p>
-		        These are my photos from Uzbekistan. [<a href="#sources">1</a>]
+		  These are my photos from Uzbekistan. [<a href="#sources">1</a>]
 		</p>
 		<p>
-		        Hope you like them!
+		  Hope you like them!
 		</p>
-		<p class="smallprint">
-			<a name="sources">Sources</a>:
-			<a href="https://en.wikipedia.org/wiki/Uzbekistan">1</a>,			
-			<a href="https://en.wikipedia.org/wiki/Tashkent">2</a>,			
-			<a href="https://en.wikipedia.org/wiki/Samarkand">3</a>,			
-			<a href="https://rspec.info/">4</a>,			
-			<a href="https://www.m1key.me">5</a>,			
-			<a href="https://www.google.com">6</a>,			
-			<a href="https://zodiaclung.com">7</a>,			
-			<a href="https://en.wikipedia.org/wiki/Monster_Magnet">8</a>,			
-			<a href="https://en.wikipedia.org/wiki/Dave_Wyndorf">9</a>,			
-			<a href="https://www.toolband.com/">10</a>.			
-			<br />
-			Thanks to my dad!
-			<br />
-			Uploaded on: 2014-12-11.
-		</p>
-	</div>
-	<div class="map">
-		<a href="https://www.google.co.uk/maps/place/Samarkand,+Uzbekistan/@39.9108825,38.9307777,4z/data=!4m2!3m1!1s0x3f4d191960077df7:0x487636d9d13f2f57?hl=en">
-			<img src="uzbekistan_map.png" alt="Samarkand, Uzbekistan" title="Samarkand, Uzbekistan" /></a>
-	</div>
+      
+      <p class="smallprint">
+        <span id="sources">Sources</span>:
+		  <a href="https://en.wikipedia.org/wiki/Uzbekistan">1</a>,		  
+		  <a href="https://en.wikipedia.org/wiki/Tashkent">2</a>,		  
+		  <a href="https://en.wikipedia.org/wiki/Samarkand">3</a>,		  
+		  <a href="https://rspec.info/">4</a>,		  
+		  <a href="https://www.m1key.me">5</a>,		  
+		  <a href="https://www.google.com">6</a>,		  
+		  <a href="https://zodiaclung.com">7</a>,		  
+		  <a href="https://en.wikipedia.org/wiki/Monster_Magnet">8</a>,		  
+		  <a href="https://en.wikipedia.org/wiki/Dave_Wyndorf">9</a>,		  
+		  <a href="https://www.toolband.com/">10</a>.		  
+      </p>
+
+      <p>Thanks to my dad!</p>
+      <p class="smallprint">Uploaded on: 2014-12-11.</p>
+    </section>
+
+    <figure class="map">
+      <a href="https://www.openstreetmap.org/search?query=samarkand%2C+uzbekistan&zoom=19&minlon=-0.07627665996551515&minlat=51.55093186854235&maxlon=-0.07335305213928224&maxlat=51.55222109657971#map=12/39.6714/66.9410"
+        target="_blank" rel="noopener noreferrer">
+        <img src="uzbekistan_map.png" alt="Map showing Samarkand, Uzbekistan location (opens in OpenStreetMap)"
+          title="Samarkand, Uzbekistan" width="320" height="240" />
+      </a>
+      <figcaption class="visually-hidden">Map showing Samarkand, Uzbekistan location (opens in OpenStreetMap)</figcaption>
+    </figure>
 
 	
 	<h2>Welcome to Tashkent!</h2>
