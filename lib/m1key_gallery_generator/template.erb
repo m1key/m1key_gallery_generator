@@ -104,21 +104,30 @@
 		</div>
 	</div>
 	<% end %>
-	
-	<div class="navigation">
-		<a href="../">&lt; Back to Photography</a><br />
-		<a href="../../">&lt; &lt; Back to M1key.me</a>
-	</div>
-	<div id="footer">
-		<hr />
-		<a href="https://www.m1key.me">M1key.me</a> -
-		<a href="../../photography/">Photography</a> -
-		<a href="https://www.flickr.com/photos/m1key-me/">Flickr</a> -
-		<a href="../../about_me/">About me</a><br />
-		&copy;2010–<%= year %> Michal Huniewicz, www.m1key.me
-	</div>
-</div>
+    <nav class="navigation" aria-label="Gallery navigation bottom">
+      <ul>
+        <li><a href="../" class="nav-link">&lt; Back to Photography</a></li>
+        <li><a href="../../" class="nav-link">&lt;&lt; Back to M1key.me</a></li>
+      </ul>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="Site navigation">
+      <ul>
+        <li><a href="https://www.m1key.me" class="nav-link">M1key.me</a></li>
+        <li><a href="https://www.m1key.me/photography/" class="nav-link">Photography</a></li>
+        <li><a href="https://www.m1key.me/about_me/" class="nav-link">About me</a></li>
+        <li><a href="https://www.flickr.com/photos/m1key-me/" rel="noopener noreferrer" class="nav-link">Flickr</a></li>
+      </ul>
+    </nav>
+
+    <div class="legal">
+      <p>&copy;2010–<%= year %> Michal Huniewicz — m1key.me</p>
+    </div>
+  </footer>
 
 </body>
-</html>
 
+</html>
