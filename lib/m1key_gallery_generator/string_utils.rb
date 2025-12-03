@@ -1,6 +1,6 @@
 module GalleryGenerator
   def tabs(how_many_tabs)
-    "\t" * how_many_tabs
+    "  " * how_many_tabs
   end
 
   def add_tabs_before_every_line(multi_line_string, how_many_tabs)

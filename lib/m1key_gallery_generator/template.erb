@@ -86,23 +86,19 @@
       </a>
       <figcaption class="visually-hidden">Map showing <%= map_title %> location (opens in OpenStreetMap)</figcaption>
     </figure>
-
 	<% photos.each do |photo| %>
-	<h2><%= photo.title %></h2>
-	<div class="photo">
-		<div class="title">
-			<a name="<%= photo.id %>" href="#<%= photo.id %>" title="Link to this photo"><strong><%= photo.title %></strong></a>
-		</div>
-		<div style="height: <%= photo.metadata.height %>px" class="imageContainer">
-			<img src="<%= slug %>_<%= photo.id %>.jpg" alt="<%= photo.title %>" />
-		</div>
-		<div class="description">
-<%= photo.description %>
-		</div>
-		<div class="technical">
-			ISO <%= photo.metadata.iso %>, <%= photo.metadata.focal_length %>mm, f/<%= photo.metadata.f_number %>, <%= photo.metadata.exposure_time %>s. <%= photo.technical_info %>
-		</div>
-	</div>
+    <article class="photo" id="<%= photo.id %>">
+      <header>
+        <h2 class="title"><a href="#<%= photo.id %>" title="Link to this photo"><%= photo.title %></a></h2>
+      </header>
+      <figure class="image-container">
+        <img src="<%= slug %>_<%= photo.id %>.jpg" alt="<%= photo.title %>" loading="lazy" />
+        <figcaption>
+          <span class="description"><%= photo.description %></span>
+          <span class="technical">ISO <%= photo.metadata.iso %>, <%= photo.metadata.focal_length %>mm, f/<%= photo.metadata.f_number %>, <%= photo.metadata.exposure_time %>s.<% if photo.technical_info.to_s != '' %> <%= photo.technical_info %><% end %></span>
+        </figcaption>
+      </figure>
+    </article>
 	<% end %>
     <nav class="navigation" aria-label="Gallery navigation bottom">
       <ul>

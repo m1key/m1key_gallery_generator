@@ -31,9 +31,8 @@ begin
     gallery_config.sources, gallery_config.upload_date, gallery_config.map_url, gallery_config.map_title,
     gallery_config.year, viewable_photos, gallery_config.small_print).
       update_using(
-      add_tabs_before_every_description_line(2),
+      add_tabs_before_every_description_line(3),
       add_links_to_descriptions,
-      for_each_photo(&add_tabs_before_every_description_line(3)),
       for_each_photo(&add_links_to_descriptions),
       for_each_photo(&remove_final_empty_line_from_description))
 
