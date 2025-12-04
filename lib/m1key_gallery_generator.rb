@@ -4,4 +4,3 @@ require_relative 'm1key_gallery_generator/viewable_photo'
 require_relative 'm1key_gallery_generator/gallery_config'
 require_relative 'm1key_gallery_generator/photos_utils'
 require_relative 'm1key_gallery_generator/gallery_mutators'
-

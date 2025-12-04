@@ -3,6 +3,8 @@
 require 'm1key_gallery_generator'
 require 'erb'
 
+Encoding.default_external = Encoding::UTF_8
+
 include GalleryGenerator
 
 OUTPUT_FILE = 'index.html'
