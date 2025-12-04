@@ -70,7 +70,7 @@
       
       <p class="smallprint">
         <span id="sources">Sources</span>:<% sources.each_with_index do |source, index| %>
-		  <a href="<%= source %>"><%= index + 1 %></a><% if (index + 1) < sources.size %>,<% else %>.<% end -%>
+		    <a href="<%= source %>" class="nav-link">source <%= index + 1 %></a><% if (index + 1) < sources.size %>,<% else %>.<% end -%>
 		  <% end %>
       </p>
 <% if small_print.to_s != '' %>
