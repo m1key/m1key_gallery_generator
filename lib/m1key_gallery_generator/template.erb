@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title><%= title %> &mdash; Photography and Art portfolio by Michal Huniewicz</title>
-  <meta name="description" content="<%= title %> &mdash; Photography and Art portfolio by Michal Huniewicz" />
+  <title><%= title %> &mdash; Photography and Art Portfolio by Michal Huniewicz</title>
+  <meta name="description" content="<%= title %> &mdash; Photography and art portfolio by Michal Huniewicz" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&display=swap" rel="stylesheet" />
@@ -38,13 +38,14 @@
       "@type": "Person",
       "name": "Michal Huniewicz"
     },
-	"image": [
-	  {
-	    "@type": "ImageObject",
-	    "contentUrl" : "https://www.m1key.me/photography/<%= slug %>/<%= slug %>_01.jpg",
-	    "caption": "<%= title %>"
-	  }
-	],
+    "image": [<% photos.each_with_index do |photo, index| %>
+  	  {
+	      "@type": "ImageObject",
+	      "contentUrl" : "https://www.m1key.me/photography/<%= slug %>/<%= slug %>_<%= photo.id %>.jpg",
+	      "caption": "<%= photo.title %>"
+	    }<% if (index + 1) == photos.size %><% else %>,<% end -%>
+	<% end %>
+	  ],
     "description": "<%= title %> &mdash; Photography and Art portfolio by Michal Huniewicz"
   }
   </script>
