@@ -5,7 +5,7 @@ require 'm1key_gallery_generator/version'
 Gem::Specification.new do |spec|
   spec.name          = 'm1key_gallery_generator'
   spec.version       = M1keyGalleryGenerator::VERSION
-  spec.authors       = ['Mike Huniewicz']
+  spec.authors       = ['Michal Huniewicz']
   spec.email         = ['REDACTED']
   spec.required_ruby_version = '>= 3.0'
 

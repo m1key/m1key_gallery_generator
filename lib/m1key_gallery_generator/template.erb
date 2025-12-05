@@ -67,12 +67,6 @@
     <section class="information" aria-labelledby="info-heading">
       <h2 id="info-heading" class="visually-hidden">About this shoot</h2>
 <%= description -%>
-      
-      <p class="smallprint">
-        <span id="sources">Sources</span>:<% sources.each_with_index do |source, index| %>
-		    <a href="<%= source %>" class="nav-link">source <%= index + 1 %></a><% if (index + 1) < sources.size %>,<% else %>.<% end -%>
-		  <% end %>
-      </p>
 <% if small_print.to_s != '' %>
       <p><%= small_print -%></p><% end %>
       <p class="smallprint">Uploaded on: <%= upload_date %>.</p>
@@ -100,6 +94,13 @@
       </figure>
     </article>
 	<% end %>
+    <details class="sources" id="sources">
+      <summary>&nbsp;Sources</summary>
+      <ul class="smallprint"><% sources.each_with_index do |source, index| %>
+		    <li><%= index + 1 %>: <a href="<%= source %>" rel="noopener noreferrer" class="nav-link"><%= source %></a></li><% end %>
+      </ul>
+    </details>
+
     <nav class="navigation" aria-label="Gallery navigation bottom">
       <ul>
         <li><a href="../" class="nav-link">&lt; Back to Photography</a></li>
