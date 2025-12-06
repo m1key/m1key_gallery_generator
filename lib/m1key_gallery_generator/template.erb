@@ -141,7 +141,7 @@
     <details class="sources" id="sources">
       <summary>Sources</summary>
       <ul class="smallprint"><% sources.each_with_index do |source, index| %>
-		    <li><%= index + 1 %>: <a href="<%= source %>" rel="noopener noreferrer" class="nav-link"><%= source %></a></li><% end %>
+		    <li><%= index + 1 %>: <a href="<%= source %>" rel="noopener noreferrer" class="nav-link"><% if source.length > 100 %><%= source[0..50] %>[...]<%= source[-30..-1] %><% else %><%= source %><% end -%></a></li><% end %>
       </ul>
     </details>
 
