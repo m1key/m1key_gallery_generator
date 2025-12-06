@@ -42,7 +42,9 @@
   	  {
 	      "@type": "ImageObject",
 	      "contentUrl" : "https://www.m1key.me/photography/<%= slug %>/<%= slug %>_<%= photo.id %>.jpg",
-	      "caption": "<%= photo.title %>"
+	      "caption": "<%= photo.title %>",
+        "width": "<%= photo.metadata.width %>",
+        "height": "<%= photo.metadata.height %>"
 	    }<% if (index + 1) == photos.size %><% else %>,<% end -%>
 	<% end %>
 	  ],
@@ -81,13 +83,14 @@
       </a>
       <figcaption class="visually-hidden">Map showing <%= map_title %> location (opens in OpenStreetMap)</figcaption>
     </figure>
-	<% photos.each do |photo| %>
+	<% photos.each_with_index do |photo, index| %>
     <article class="photo" id="<%= photo.id %>">
       <header>
         <h2 class="title"><a href="#<%= photo.id %>" title="Link to this photo"><%= photo.title %></a></h2>
       </header>
       <figure class="image-container">
-        <img src="<%= slug %>_<%= photo.id %>.jpg" alt="<%= photo.title %>" loading="lazy" />
+        <img src="<%= slug %>_<%= photo.id %>.jpg" alt="<%= photo.title %>" <% if index == 0 %>loading="eager" fetchpriority="high"<% else %>loading="lazy"<% end %>
+          width="<%= photo.metadata.width %>" height="<%= photo.metadata.height %>" />
         <figcaption>
           <span class="description"><%= photo.description %></span>
           <span class="technical">ISO <%= photo.metadata.iso %>, <%= photo.metadata.focal_length %>mm, f/<%= photo.metadata.f_number %>, <%= photo.metadata.exposure_time %>s.<% if photo.technical_info.to_s != '' %> <%= photo.technical_info %><% end %></span>

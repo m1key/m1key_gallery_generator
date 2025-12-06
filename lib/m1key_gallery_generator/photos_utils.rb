@@ -19,7 +19,7 @@ module GalleryGenerator
       photo_technical_info = photo['technicalInfo']
       photo_metadata = get_metadata_for_image_with_file_name_containing(working_directory, photo_file_name_contains)
 
-      puts "Adding photo with ID [#{photo_id}], title [#{photo_title}], height [#{photo_metadata.height}], description [#{compact(photo['description'])}]..."
+      puts "Adding photo with ID [#{photo_id}], title [#{photo_title}], width [#{photo_metadata.width}], height [#{photo_metadata.height}], description [#{compact(photo['description'])}]..."
       photos.push ViewablePhoto.new(photo_id, photo_title, photo_description, photo_metadata, photo_technical_info)
 
       create_gallery_image(photo_metadata.original_file_name, gallery_config.slug, photo_id, working_directory)
@@ -37,12 +37,13 @@ module GalleryGenerator
     raise "ERROR  No matching photo found for #{file_name_contains}." unless selected_file_name
 
     exif = EXIFR::JPEG.new(File.join(working_directory, selected_file_name))
+    photo_width = exif.width
     photo_height = exif.height
     photo_iso = exif.iso_speed_ratings
     photo_focal_length = exif.focal_length.to_f.round.to_s
     photo_f_number = exif.f_number.to_f
     photo_exposure_time = exif.exposure_time.to_s
-    ViewablePhotoMetadata.new(selected_file_name, photo_height, photo_iso, photo_focal_length, photo_f_number, photo_exposure_time)
+    ViewablePhotoMetadata.new(selected_file_name, photo_width, photo_height, photo_iso, photo_focal_length, photo_f_number, photo_exposure_time)
   end
 
   def create_gallery_image(original_file_name, gallery_slug, photo_id, working_directory)
