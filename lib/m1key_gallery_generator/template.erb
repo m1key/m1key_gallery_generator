@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="../../styles/base_responsive.css" />
   <link rel="icon" href="../../images/icon.ico" />
@@ -34,7 +36,14 @@
     "@type": "ImageGallery",
     "name": "<%= title %> by Michal Huniewicz",
     "url": "https://www.m1key.me/photography/<%= slug %>",
+    "datePublished": "<%= upload_date %>",
+    "dateModified": "<%= upload_date %>",
     "author": {
+      "@type": "Person",
+      "name": "Michal Huniewicz",
+      "url": "https://www.m1key.me/"
+    },
+    "publisher": {
       "@type": "Person",
       "name": "Michal Huniewicz"
     },
@@ -48,7 +57,35 @@
 	    }<% if (index + 1) == photos.size %><% else %>,<% end -%>
 	<% end %>
 	  ],
-    "description": "<%= title %> &mdash; Photography and Art portfolio by Michal Huniewicz"
+    "description": "<%= title %> &mdash; Photography and Art portfolio by Michal Huniewicz",
+    "keywords": "photography, art, portfolio, Michal Huniewicz, m1key.me, <%= title %>"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "M1key.me",
+        "item": "https://www.m1key.me/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Photography",
+        "item": "https://www.m1key.me/photography/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "<%= title %>",
+        "item": "https://www.m1key.me/photography/<%= slug %>"
+      }
+    ]
   }
   </script>
 </head>
