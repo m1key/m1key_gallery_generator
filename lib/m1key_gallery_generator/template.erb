@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title><%= title %> &mdash; Photography and Art Portfolio by Michal Huniewicz</title>
-  <meta name="description" content="<%= title %> &mdash; Photography and art portfolio by Michal Huniewicz" />
+  <meta name="description" content="<%= blurb %>" />
   <link rel="canonical" href="https://www.m1key.me/photography/<%= slug %>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,14 +22,14 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="<%= title %> by Michal Huniewicz" />
-  <meta property="og:description" content="<%= title %> &mdash; Photography and Art portfolio by Michal Huniewicz" />
+  <meta property="og:description" content="<%= blurb %>" />
   <meta property="og:url" content="https://www.m1key.me/photography/<%= slug %>" />
   <meta property="og:image" content="https://www.m1key.me/photography/<%= slug %>/<%= slug %>_01.jpg" />
   <meta property="og:image:alt" content="<%= title %> by Michal Huniewicz" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<%= title %> by Michal Huniewicz" />
-  <meta name="twitter:description" content="<%= title %> &mdash; Photography and Art portfolio by Michal Huniewicz" />
+  <meta name="twitter:description" content="<%= blurb %>" />
   <meta name="twitter:image" content="https://www.m1key.me/photography/<%= slug %>/<%= slug %>_01.jpg" />
 
   <!-- Breadcrumb structured data for SEO -->
@@ -60,7 +60,7 @@
 	    }<% if (index + 1) == photos.size %><% else %>,<% end -%>
 	<% end %>
 	  ],
-    "description": "<%= title %> &mdash; Photography and Art portfolio by Michal Huniewicz",
+    "description": "<%= blurb %>",
     "keywords": "photography, art, portfolio, Michal Huniewicz, m1key.me, <%= title %>"
   }
   </script>
