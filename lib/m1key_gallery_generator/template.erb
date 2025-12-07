@@ -133,7 +133,7 @@
           width="<%= photo.metadata.width %>" height="<%= photo.metadata.height %>" />
         <figcaption>
           <span class="description"><%= photo.description %></span>
-          <span class="technical">ISO <%= photo.metadata.iso %>, <%= photo.metadata.focal_length %>mm, f/<%= photo.metadata.f_number %>, <%= photo.metadata.exposure_time %>s.<% if photo.technical_info.to_s != '' %> <%= photo.technical_info %><% end %></span>
+          <% if photo.metadata.iso.to_s != '' %><span class="technical">ISO <%= photo.metadata.iso %>, <%= photo.metadata.focal_length %>mm, f/<%= photo.metadata.f_number %>, <%= photo.metadata.exposure_time %>s.<% if photo.technical_info.to_s != '' %> <%= photo.technical_info %><% end %></span><% end %>
         </figcaption>
       </figure>
     </article>
