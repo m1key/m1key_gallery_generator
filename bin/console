@@ -2,6 +2,7 @@
 
 require 'm1key_gallery_generator'
 require 'erb'
+require 'htmlentities'
 
 Encoding.default_external = Encoding::UTF_8
 

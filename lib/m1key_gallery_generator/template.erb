@@ -52,9 +52,9 @@
     },
     "image": [<% photos.each_with_index do |photo, index| %>
   	  {
-	      "@type": "ImageObject",
-	      "contentUrl" : "https://www.m1key.me/<%= genre %>/<%= slug %>/<%= slug %>_<%= photo.id %>.jpg",
-	      "caption": "<%= photo.title %>",
+        "@type": "ImageObject",
+        "contentUrl" : "https://www.m1key.me/<%= genre %>/<%= slug %>/<%= slug %>_<%= photo.id %>.jpg",
+        "caption": "<%= HTMLEntities.new.decode(photo.title) %>",
         "width": <%= photo.metadata.width %>,
         "height": <%= photo.metadata.height %>
 	    }<% if (index + 1) == photos.size %><% else %>,<% end -%>
