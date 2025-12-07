@@ -85,7 +85,7 @@
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "<%= title %>",
+        "name": "<%= HTMLEntities.new.decode(title) %>",
         "item": "https://www.m1key.me/<%= genre %>/<%= slug %>"
       }
     ]
