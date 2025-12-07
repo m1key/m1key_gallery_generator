@@ -5,7 +5,7 @@ require_relative 'console_utils'
 module GalleryGenerator
   class GalleryConfig
 
-    attr_reader :title, :map_url, :map_title, :slug, :upload_date, :description, :sources, :year, :photos, :small_print, :blurb
+    attr_reader :title, :map_url, :map_title, :slug, :upload_date, :description, :sources, :year, :photos, :small_print, :blurb, :genre
 
     def initialize(yaml_config_file_name)
       puts "Attempting to parse #{yaml_config_file_name} to read gallery configuration..."
@@ -28,7 +28,13 @@ module GalleryGenerator
       @small_print = gallery_configuration['small_print']
       puts "Small print is [#{@small_print}]."
       @blurb = gallery_configuration['blurb']
-      puts "Gallery description is [#{compact(@blurb)}]."
+      puts "Gallery blurb is [#{compact(@blurb)}]."
+      if gallery_configuration['genre'] == nil
+        @genre = 'photography'
+      else
+        @genre = gallery_configuration['genre']
+      end
+      puts "Gallery genre is [#{compact(@genre)}]."
 
       @sources = gallery_configuration['sources']
 

@@ -31,7 +31,7 @@ begin
 
   gallery = ViewableGallery.new(gallery_config.title, gallery_config.description, gallery_config.slug,
     gallery_config.sources, gallery_config.upload_date, gallery_config.map_url, gallery_config.map_title,
-    gallery_config.year, viewable_photos, gallery_config.small_print, gallery_config.blurb).
+    gallery_config.year, viewable_photos, gallery_config.small_print, gallery_config.blurb, gallery_config.genre).
       update_using(
       add_tabs_before_every_description_line(3),
       add_links_to_descriptions,
