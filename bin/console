@@ -3,6 +3,7 @@
 require 'm1key_gallery_generator'
 require 'erb'
 require 'htmlentities'
+require 'date'
 
 Encoding.default_external = Encoding::UTF_8
 
@@ -29,10 +30,14 @@ begin
   viewable_photos = photos_config_into_viewable_photos(working_directory, gallery_config)
 
   puts 'Creating viewable gallery...'
-
+  update_date = gallery_config.update_date
+  if update_date.to_s == ''
+    update_date = Date.today.strftime('%Y-%m-%d')
+  end
   gallery = ViewableGallery.new(gallery_config.title, gallery_config.description, gallery_config.slug,
     gallery_config.sources, gallery_config.upload_date, gallery_config.map_url, gallery_config.map_title,
-    gallery_config.year, viewable_photos, gallery_config.small_print, gallery_config.blurb, gallery_config.genre).
+    gallery_config.year, viewable_photos, gallery_config.small_print, gallery_config.blurb, gallery_config.genre,
+    update_date).
       update_using(
       add_tabs_before_every_description_line(3),
       add_links_to_descriptions,

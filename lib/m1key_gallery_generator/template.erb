@@ -40,7 +40,7 @@
     "name": "<%= title %> by Michal Huniewicz",
     "url": "https://www.m1key.me/<%= genre %>/<%= slug %>",
     "datePublished": "<%= upload_date %>",
-    "dateModified": "<%= upload_date %>",
+    "dateModified": "<%= update_date %>",
     "author": {
       "@type": "Person",
       "name": "Michal Huniewicz",
@@ -112,7 +112,7 @@
 <%= description -%>
 <% if small_print.to_s != '' %>
       <p><%= small_print -%></p><% end %>
-      <p class="smallprint">Uploaded on: <%= upload_date %>.</p>
+      <p class="smallprint">Uploaded on: <%= upload_date %>. Updated on: <%= update_date %>.</p>
     </section>
 
     <figure class="map">
