@@ -74,11 +74,11 @@ Build the gem.
 
 Install the gem.
 
-> gem install m1key_gallery_generator-0.3.11.gem
+> gem install m1key_gallery_generator-0.3.12.gem
 
 In your gallery directory, have a file called generate.bat that looks like this:
 
-> ruby c:\Ruby34-x64\lib\ruby\gems\3.4.0\gems\m1key_gallery_generator-0.3.11\bin\console . wait_on_error
+> ruby c:\Ruby34-x64\lib\ruby\gems\3.4.0\gems\m1key_gallery_generator-0.3.12\bin\console . wait_on_error
 
 ## Development
 
@@ -95,7 +95,7 @@ To build gem:
 > gem build m1key_gallery_generator.gemspec
 
 To install gem:
-> gem install m1key_gallery_generator-0.3.11.gem
+> gem install m1key_gallery_generator-0.3.12.gem
 
 To test gem:
 > irb
