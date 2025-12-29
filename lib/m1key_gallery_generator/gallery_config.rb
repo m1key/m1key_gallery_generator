@@ -15,9 +15,13 @@ module GalleryGenerator
 
       @title = gallery_configuration['title']
       puts "Gallery title is [#{@title}]."
-      @map_url = gallery_configuration['map']['url']
-      puts "Map url is [#{@map_url}]."
-      @map_title = gallery_configuration['map']['title']
+      @map_url = nil
+      @map_title = nil
+      if gallery_configuration['map'] != nil
+        @map_url = gallery_configuration['map']['url']
+        @map_title = gallery_configuration['map']['title']
+      end
+      puts "Map url is [#{@map_url}]."      
       puts "Map title is [#{@map_title}]."
       @slug = gallery_configuration['slug']
       puts "Gallery slug is [#{@slug}]."

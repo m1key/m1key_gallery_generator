@@ -114,7 +114,7 @@
       <p><%= small_print -%></p><% end %>
       <p class="smallprint">Uploaded on: <%= upload_date %>. Updated on: <%= update_date %>.</p>
     </section>
-
+<% if map_url.to_s != '' %>
     <figure class="map">
       <a href="<%= map_url %>"
         target="_blank" rel="noopener noreferrer">
@@ -122,7 +122,7 @@
           title="<%= map_title %>" width="320" height="240" />
       </a>
       <figcaption class="visually-hidden">Map showing <%= map_title %> location (opens in OpenStreetMap)</figcaption>
-    </figure>
+    </figure><% end %>
 	<% photos.each_with_index do |photo, index| %>
     <article class="photo" id="<%= photo.id %>">
       <header>
