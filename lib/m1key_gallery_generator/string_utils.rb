@@ -14,6 +14,6 @@ module GalleryGenerator
   end
 
   def add_links_to_sources(multi_line_string)
-    multi_line_string.gsub(/\[(\d+)(, .*?)?\]/, '[<a href="#sources">\1</a>]')
+    multi_line_string.gsub(/\[(\d+(, .*?)?)\]/, '[<a href="#sources">\1</a>]')
   end
 end
