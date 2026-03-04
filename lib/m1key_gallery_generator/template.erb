@@ -6,26 +6,42 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title><%= title %> &mdash; Photography and Art Portfolio by Michal Huniewicz</title>
   <meta name="description" content="<%= blurb %>" />
-  <link rel="canonical" href="https://www.m1key.me/<%= genre %>/<%= slug %>" />
+  <meta name="author" content="Michal Huniewicz" />
+  <meta name="robots" content="index, follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://www.m1key.me/<%= genre %>/<%= slug %>/" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&display=swap" rel="stylesheet" />
+  
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&display=swap"
     rel="preload" as="style" />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&display=swap" rel="stylesheet" />
+  
   <link rel="stylesheet" href="../../styles/base_responsive.css" />
-  <link rel="icon" href="../../images/icon.ico" />
 
-  <meta property="og:locale" content="en_US" />
+  <!-- Main favicon for modern browsers -->
+  <link rel="icon" href="../../favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml" media="(prefers-color-scheme: light)" />
+  <!-- PNG fallback for maximum compatibility -->
+  <link rel="icon" href="../../favicon-48-dark.png" sizes="48x48" type="image/png" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="../../favicon-48.png" sizes="48x48" type="image/png" media="(prefers-color-scheme: light)" />
+
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+
+  <meta property="og:locale" content="en_GB" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="<%= title %> by Michal Huniewicz" />
   <meta property="og:description" content="<%= blurb %>" />
-  <meta property="og:url" content="https://www.m1key.me/<%= genre %>/<%= slug %>" />
+  <meta property="og:url" content="https://www.m1key.me/<%= genre %>/<%= slug %>/" />
   <meta property="og:image" content="https://www.m1key.me/<%= genre %>/<%= slug %>/<%= slug %>_01.jpg" />
   <meta property="og:image:alt" content="<%= title %> by Michal Huniewicz" />
+  <meta property="og:site_name" content="M1key.me" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="<%= title %> by Michal Huniewicz" />
