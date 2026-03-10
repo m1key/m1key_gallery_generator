@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title><%= title %> &mdash; Photography and Art Portfolio by Michal Huniewicz</title>
+  <title><%= HTMLEntities.new.encode(title) %> &mdash; Photography and Art Portfolio by Michal Huniewicz</title>
   <meta name="description" content="<%= blurb %>" />
   <meta name="author" content="Michal Huniewicz" />
   <meta name="robots" content="index, follow" />
@@ -120,7 +120,7 @@
     </nav>
 
     <header class="site-header">
-      <h1 class="page-title"><%= title %> by Michal Huniewicz</h1>
+      <h1 class="page-title"><%= HTMLEntities.new.encode(title) %> by Michal Huniewicz</h1>
     </header>
 
     <section class="information" aria-labelledby="info-heading">
@@ -134,10 +134,10 @@
     <figure class="map">
       <a href="<%= map_url %>"
         target="_blank" rel="noopener noreferrer">
-        <img src="<%= slug %>_map.png" alt="Map showing <%= map_title %> location (opens in OpenStreetMap)"
-          title="<%= map_title %>" width="320" height="240" />
+        <img src="<%= slug %>_map.png" alt="Map showing <%= HTMLEntities.new.encode(map_title) %> location (opens in OpenStreetMap)"
+          title="<%= HTMLEntities.new.encode(map_title) %>" width="320" height="240" />
       </a>
-      <figcaption class="visually-hidden">Map showing <%= map_title %> location (opens in OpenStreetMap)</figcaption>
+      <figcaption class="visually-hidden">Map showing <%= HTMLEntities.new.encode(map_title) %> location (opens in OpenStreetMap)</figcaption>
     </figure><% end %>
   <% photos.each_with_index do |photo, index| %>
     <article class="photo" id="<%= photo.id %>">
