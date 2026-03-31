@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'exifr', '~> 1.5', '>= 1.5.1'
+  spec.add_runtime_dependency 'logger', '~> 1.7'
 
   spec.add_development_dependency 'bundler', '~> 4.0', '>= 4.0.6'
   spec.add_development_dependency 'rake', '~> 13.3', '>= 13.3.1'
