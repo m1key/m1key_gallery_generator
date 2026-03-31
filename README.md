@@ -1,12 +1,12 @@
 # M1keyGalleryGenerator
 
-This Ruby script generates www.m1key.me style gallery.
+This Ruby script generates https://www.m1key.me-style galleries.
 
-A sample gallery is this: https://www.m1key.me/photography/mauritania_part_2/
+A sample gallery: https://www.m1key.me/photography/mauritania_part_2/
 
 ## Status
 
-This is work in progress, but has been used to generate real-life galleries.
+Maintained, used, going strong.
 
 ## Set up
 
@@ -22,7 +22,6 @@ Install Ruby Gem Bundler in Fedora 35 and higher:
 
 > dnf install ruby-irb
 
-
 ### Ubuntu
 
 Install Ruby using rbenv. Then:
@@ -35,9 +34,7 @@ Install Ruby using rbenv. Then:
 
 ### Windows
 
-Install Ruby. This has been most recently tested on Ruby 4.0.2-1.
-
-Install Gitbash.
+Install Ruby. This has been most recently tested on Ruby 4.0.2.
 
 > gem install bundler
 
@@ -49,16 +46,15 @@ Install dependencies:
 
 ## Tests
 
-Run the script on some test data. This is required to run other tests.
-This assumes there is a valid gallery.yaml file present in the current folder,
-and the photos themselves in the format DSC_1234.jpg.
-*This is required to run tests.*
+### Setup
 
 > ruby -Ilib bin/console test/data
 
-Run other tests:
+### Synthetic gallery tests
 
 > rake
+
+### Code-level tests
 
 > rspec spec
 
@@ -88,36 +84,3 @@ To release a new version, update the version number in `version.rb`,
 commit your changes,
 and then run `bundle exec rake release` to create a git tag for the version,
 push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-### Gem
-
-To build gem:
-> gem build m1key_gallery_generator.gemspec
-
-To install gem:
-> gem install m1key_gallery_generator-0.4.0.gem
-
-To test gem:
-> irb
-
-> require 'm1key_gallery_generator'
-
-### Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'm1key_gallery_generator'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install m1key_gallery_generator
-
-## Gotchas
-
-Do not edit the templates in Atom due to its whitespace magic. I used vi instead.
