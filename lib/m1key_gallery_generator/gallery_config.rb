@@ -9,7 +9,7 @@ module GalleryGenerator
 
     def initialize(yaml_config_file_name)
       puts "Attempting to parse #{yaml_config_file_name} to read gallery configuration..."
-      gallery_configuration = YAML.safe_load_file(yaml_config_file_name, permitted_classes: [Date, Symbol], permitted_symbols: [])
+      gallery_configuration = YAML.safe_load_file(yaml_config_file_name, permitted_classes: [Date])
       puts 'Parsed, seemingly.'
       puts
 

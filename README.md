@@ -27,15 +27,15 @@ Install Ruby Gem Bundler in Fedora 35 and higher:
 
 Install Ruby using rbenv. Then:
 
-> rbenv install 3.4.7
+> rbenv install 4.0.2
 
-> rbenv global 3.4.7
+> rbenv global 4.0.2
 
 > gem install bundler
 
 ### Windows
 
-Install Ruby. This has been most recently tested on Ruby 3.4.7.
+Install Ruby. This has been most recently tested on Ruby 4.0.2-1.
 
 Install Gitbash.
 
@@ -45,7 +45,7 @@ Install Gitbash.
 
 Install dependencies:
 
-> ./bin/setup
+> bundle install
 
 ## Tests
 
@@ -74,11 +74,11 @@ Build the gem.
 
 Install the gem.
 
-> gem install m1key_gallery_generator-0.3.21.gem
+> gem install m1key_gallery_generator-0.4.0.gem
 
 In your gallery directory, have a file called generate.bat that looks like this:
 
-> ruby c:\Ruby34-x64\lib\ruby\gems\3.4.0\gems\m1key_gallery_generator-0.3.21\bin\console . wait_on_error
+> ruby c:\Ruby40-x64\lib\ruby\gems\4.0.0\gems\m1key_gallery_generator-0.4.0\bin\console . wait_on_error
 
 ## Development
 
@@ -95,7 +95,7 @@ To build gem:
 > gem build m1key_gallery_generator.gemspec
 
 To install gem:
-> gem install m1key_gallery_generator-0.3.21.gem
+> gem install m1key_gallery_generator-0.4.0.gem
 
 To test gem:
 > irb

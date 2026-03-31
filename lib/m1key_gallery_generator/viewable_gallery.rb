@@ -3,7 +3,7 @@ require_relative 'string_utils'
 module GalleryGenerator
   class ViewableGallery
     attr_reader :title, :description, :slug, :sources, :upload_date, :map_url, :map_title, :year, :photos, :small_print, :blurb, :genre, :update_date
-    def initialize(title, description, slug, sources, upload_date, map_url, map_title, year, viewable_photos, small_print, blurb, genre, update_date)
+    def initialize(title:, description:, slug:, sources:, upload_date:, map_url:, map_title:, year:, viewable_photos:, small_print:, blurb:, genre:, update_date:)
       @title = String.new(title)
       @description = description
       @slug = slug
@@ -30,9 +30,9 @@ module GalleryGenerator
         updated_gallery = update_function.call(updated_gallery)
       end
 
-      ViewableGallery.new(updated_gallery.title, updated_gallery.description, updated_gallery.slug,
-          updated_gallery.sources, updated_gallery.upload_date, updated_gallery.map_url,
-          updated_gallery.map_title, updated_gallery.year, to_viewable_photos(updated_gallery.photos), updated_gallery.small_print, updated_gallery.blurb, updated_gallery.genre, updated_gallery.update_date)
+      ViewableGallery.new(title: updated_gallery.title, description: updated_gallery.description, slug: updated_gallery.slug,
+          sources: updated_gallery.sources, upload_date: updated_gallery.upload_date, map_url: updated_gallery.map_url,
+          map_title: updated_gallery.map_title, year: updated_gallery.year, viewable_photos: to_viewable_photos(updated_gallery.photos), small_print: updated_gallery.small_print, blurb: updated_gallery.blurb, genre: updated_gallery.genre, update_date: updated_gallery.update_date)
     end
 
     def to_viewable_photos(mutable_viewable_photos)

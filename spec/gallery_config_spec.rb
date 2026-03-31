@@ -2,7 +2,7 @@ require 'spec_helper'
 
 include GalleryGenerator
 
-describe ViewableGallery do
+RSpec.describe ViewableGallery do
   it 'returns 2 photo digits for 1 photo' do
     config = GalleryConfig.new(File.join(File.dirname(__FILE__), '..', 'spec', 'data', 'gallery_with_1_photo.yaml'))
     expect(config.photo_id_digits).to eq(2)

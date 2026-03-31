@@ -34,10 +34,10 @@ begin
   if update_date.to_s == ''
     update_date = Date.today.strftime('%Y-%m-%d')
   end
-  gallery = ViewableGallery.new(gallery_config.title, gallery_config.description, gallery_config.slug,
-    gallery_config.sources, gallery_config.upload_date, gallery_config.map_url, gallery_config.map_title,
-    gallery_config.year, viewable_photos, gallery_config.small_print, gallery_config.blurb, gallery_config.genre,
-    update_date).
+  gallery = ViewableGallery.new(title: gallery_config.title, description: gallery_config.description, slug: gallery_config.slug,
+    sources: gallery_config.sources, upload_date: gallery_config.upload_date, map_url: gallery_config.map_url, map_title: gallery_config.map_title,
+    year: gallery_config.year, viewable_photos: viewable_photos, small_print: gallery_config.small_print, blurb: gallery_config.blurb, genre: gallery_config.genre,
+    update_date: update_date).
       update_using(
       add_tabs_before_every_description_line(3),
       add_links_to_descriptions,

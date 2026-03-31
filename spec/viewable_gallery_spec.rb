@@ -2,15 +2,15 @@ require 'spec_helper'
 
 include GalleryGenerator
 
-describe ViewableGallery do
+RSpec.describe ViewableGallery do
   before do    
     @do_nothing = lambda do |mutable_viewable_content|
       return mutable_viewable_content
     end
     @original_title = 'Original Title'
-    @viewable_gallery_original = ViewableGallery.new(@original_title, 'Gallery description', 'gallery', \
-      [], Time.now, "https://www.google.com/map/1", "Map Title", \
-      "2015", [], "", "Gallery blurb", "photography", "2024-06-10")
+    @viewable_gallery_original = ViewableGallery.new(title: @original_title, description: 'Gallery description', slug: 'gallery', \
+      sources: [], upload_date: Time.now, map_url: "https://www.google.com/map/1", map_title: "Map Title", \
+      year: "2015", viewable_photos: [], small_print: "", blurb: "Gallery blurb", genre: "photography", update_date: "2024-06-10")
   end
 
   def change_title(new_title)
