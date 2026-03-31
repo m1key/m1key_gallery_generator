@@ -40,7 +40,7 @@ RSpec.describe ViewableGallery do
     new_title = "New Title"
     @viewable_gallery_original.update_using(change_title(new_title))
     expect(@viewable_gallery_original.title).to eq(@original_title)
-    expect(@viewable_gallery_original.title).to eq(new_title) # Playing with RSpect...
+    expect(@viewable_gallery_original.title).not_to eq(new_title) # Playing with RSpect...
   end
 
   it "cannot be modified even when title variable used while creating is modified" do
