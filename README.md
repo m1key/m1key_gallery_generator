@@ -10,7 +10,7 @@ Maintained, used, going strong.
 
 ## Set up
 
-### Fedora 35+
+### Fedora
 
 Install Ruby:
 
@@ -24,7 +24,18 @@ Install Ruby Gem Bundler in Fedora 35 and higher:
 
 ### Ubuntu
 
-Install Ruby using rbenv. Then:
+This was most recently tested on Ubuntu 24.04.
+
+Install rbenv using this command (the one shipped with the system is out of date):
+
+> curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+
+Rbenv hackery:
+
+> apt install libffi-dev
+> apt install libyaml-dev
+
+Then install Ruby:
 
 > rbenv install 4.0.2
 
@@ -32,9 +43,13 @@ Install Ruby using rbenv. Then:
 
 > gem install bundler
 
+> gem install rspec
+
 ### Windows
 
-Install Ruby. This has been most recently tested on Ruby 4.0.2.
+This was most recently tested on Windows 11.
+
+Install Ruby 4.0.2 using rubyinstaller.org. Then run:
 
 > gem install bundler
 
