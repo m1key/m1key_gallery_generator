@@ -12,15 +12,22 @@ Maintained, used, going strong.
 
 ### Fedora
 
+This was most recently tested on Fedora 43 Workstation.
+
+Install rbenv using this command (the one shipped with the system is out of date):
+
+`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`
+
 Install Ruby:
 
-> dnf install ruby
+`rbenv install 4.0.2`
 
 Install Ruby Gem Bundler in Fedora 35 and higher:
 
-> gem install bundler
-
-> dnf install ruby-irb
+```
+gem install bundler
+dnf install ruby-irb
+```
 
 ### Ubuntu
 
@@ -28,11 +35,12 @@ This was most recently tested on Ubuntu 24.04.
 
 Install rbenv using this command (the one shipped with the system is out of date):
 
-> curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`
 
 Rbenv hackery:
 
 > apt install libffi-dev
+
 > apt install libyaml-dev
 
 Then install Ruby:
