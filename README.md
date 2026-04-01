@@ -1,6 +1,6 @@
 # M1keyGalleryGenerator
 
-This Ruby script generates https://www.m1key.me-style galleries.
+This Ruby script generates [m1key.me](https://www.m1key.me)-style galleries.
 
 A sample gallery: https://www.m1key.me/photography/mauritania_part_2/
 
@@ -16,7 +16,9 @@ This was most recently tested on Fedora 43 Workstation.
 
 Install rbenv using this command (the one shipped with the system is out of date):
 
-```curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash```
+```
+curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash
+```
 
 Install Ruby:
 
