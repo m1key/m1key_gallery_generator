@@ -16,15 +16,13 @@ This was most recently tested on Fedora 43 Workstation.
 
 Install rbenv using this command (the one shipped with the system is out of date):
 
-`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`
+```curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash```
 
 Install Ruby:
 
-`rbenv install 4.0.2`
-
-Install Ruby Gem Bundler in Fedora 35 and higher:
-
 ```
+rbenv install 4.0.2
+rbenv global 4.0.2
 gem install bundler
 dnf install ruby-irb
 ```
@@ -35,23 +33,23 @@ This was most recently tested on Ubuntu 24.04.
 
 Install rbenv using this command (the one shipped with the system is out of date):
 
-`curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash`
+```curl -fsSL https://github.com/rbenv/rbenv-installer/raw/HEAD/bin/rbenv-installer | bash```
 
 Rbenv hackery:
 
-> apt install libffi-dev
-
-> apt install libyaml-dev
+```
+apt install libffi-dev
+apt install libyaml-dev
+```
 
 Then install Ruby:
 
-> rbenv install 4.0.2
-
-> rbenv global 4.0.2
-
-> gem install bundler
-
-> gem install rspec
+```
+rbenv install 4.0.2
+rbenv global 4.0.2
+gem install bundler
+gem install rspec
+```
 
 ### Windows
 
@@ -59,27 +57,27 @@ This was most recently tested on Windows 11.
 
 Install Ruby 4.0.2 using rubyinstaller.org. Then run:
 
-> gem install bundler
+```gem install bundler```
 
 ### All
 
 Install dependencies:
 
-> bundle install
+```bundle install```
 
 ## Tests
 
 ### Setup
 
-> ruby -Ilib bin/console test/data
+```ruby -Ilib bin/console test/data```
 
 ### Synthetic gallery tests
 
-> rake
+```rake```
 
 ### Code-level tests
 
-> rspec spec
+```rspec spec```
 
 ## Usage
 
@@ -89,15 +87,15 @@ Clone the project.
 
 Build the gem.
 
-> gem build m1key_gallery_generator.gemspec
+```gem build m1key_gallery_generator.gemspec```
 
 Install the gem.
 
-> gem install m1key_gallery_generator-0.4.0.gem
+```gem install m1key_gallery_generator-0.4.0.gem```
 
 In your gallery directory, have a file called generate.bat that looks like this:
 
-> ruby c:\Ruby40-x64\lib\ruby\gems\4.0.0\gems\m1key_gallery_generator-0.4.0\bin\console . wait_on_error
+```ruby c:\Ruby40-x64\lib\ruby\gems\4.0.0\gems\m1key_gallery_generator-0.4.0\bin\console . wait_on_error```
 
 ## Development
 
