@@ -51,7 +51,6 @@ Then install Ruby:
 rbenv install 4.0.2
 rbenv global 4.0.2
 gem install bundler
-gem install rspec
 ```
 
 ### Windows
@@ -110,7 +109,7 @@ Install the gem.
 gem install m1key_gallery_generator-0.4.0.gem
 ```
 
-In your gallery directory, have a file called `generate.bat`s that looks like this:
+In your gallery directory, have a file called `generate.bat` that looks like this:
 
 ```
 ruby c:\Ruby40-x64\lib\ruby\gems\4.0.0\gems\m1key_gallery_generator-0.4.0\bin\console . wait_on_error
