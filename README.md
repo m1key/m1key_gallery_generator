@@ -1,6 +1,7 @@
 # M1keyGalleryGenerator
 
-This Ruby script generates [m1key.me](https://www.m1key.me)-style galleries.
+This Ruby script generates [m1key.me](https://www.m1key.me)-style galleries based on a `gallery.yaml` file.
+The `gallery.yaml` file title, blurb, descriptions should escape HTML tags.
 
 A sample gallery: https://www.m1key.me/photography/mauritania_part_2/
 
