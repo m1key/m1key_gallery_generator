@@ -1,9 +1,9 @@
-title: Uzbekistan
+title: Uzbekistan &amp; Others
 slug: uzbekistan
 year: 2015
 map:
         url: https://www.openstreetmap.org/search?query=samarkand%2C+uzbekistan&zoom=19&minlon=-0.07627665996551515&minlat=51.55093186854235&maxlon=-0.07335305213928224&maxlat=51.55222109657971#map=12/39.6714/66.9410
-        title: Samarkand, Uzbekistan
+        title: Samarkand &amp; Others, Uzbekistan
 description: |
   <p>
     These are my photos from Uzbekistan. [1]
@@ -14,7 +14,7 @@ description: |
 upload_date: '2014-12-11'
 update_date: '2025-12-12'
 small_print: Thanks to my dad!
-blurb: A collection of photographs from my trip to Uzbekistan in 2015, capturing the rich culture and stunning landscapes of Tashkent, Samarkand, and Bukhara.
+blurb: A collection of photographs from my trip to Uzbekistan &amp; Others in 2015, capturing the rich culture and stunning landscapes of Tashkent, Samarkand, and Bukhara.
 sources:
         - https://en.wikipedia.org/wiki/Uzbekistan
         - https://en.wikipedia.org/wiki/Tashkent
@@ -38,7 +38,7 @@ photos:
           description: Photo taken at night in Bukhara. [3]
           fileNameContains: "0041"
           technicalInfo:
-        - title: Samarkand
+        - title: "&quot;Samarkand&quot;"
           description: Samarkand [1] is amazing! [10]
           fileNameContains: "8989"
         - title: Iceland
