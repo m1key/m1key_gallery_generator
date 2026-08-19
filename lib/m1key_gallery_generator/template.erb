@@ -16,11 +16,11 @@
   <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&amp;display=swap"
     rel="preload" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&amp;display=swap" rel="stylesheet" />
   
   <link rel="stylesheet" href="../../styles/base_responsive.css" />
 
@@ -36,16 +36,16 @@
 
   <meta property="og:locale" content="en_GB" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="<%= HTMLEntities.new.decode(title).gsub('"', '\\"') %> by Michal Huniewicz" />
-  <meta property="og:description" content="<%= HTMLEntities.new.decode(blurb).gsub('"', '\\"') %>" />
+  <meta property="og:title" content="<%= title.gsub('"', '\\"') %> by Michal Huniewicz" />
+  <meta property="og:description" content="<%= blurb.gsub('"', '\\"') %>" />
   <meta property="og:url" content="https://www.m1key.me/<%= genre %>/<%= slug %>/" />
   <meta property="og:image" content="https://www.m1key.me/<%= genre %>/<%= slug %>/<%= slug %>_01.jpg" />
-  <meta property="og:image:alt" content="<%= HTMLEntities.new.decode(title).gsub('"', '\\"') %> by Michal Huniewicz" />
+  <meta property="og:image:alt" content="<%= title.gsub('"', '\\"') %> by Michal Huniewicz" />
   <meta property="og:site_name" content="M1key.me" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<%= HTMLEntities.new.decode(title).gsub('"', '\\"') %> by Michal Huniewicz" />
-  <meta name="twitter:description" content="<%= HTMLEntities.new.decode(blurb).gsub('"', '\\"') %>" />
+  <meta name="twitter:title" content="<%= title.gsub('"', '\\"') %> by Michal Huniewicz" />
+  <meta name="twitter:description" content="<%= blurb.gsub('"', '\\"') %>" />
   <meta name="twitter:image" content="https://www.m1key.me/<%= genre %>/<%= slug %>/<%= slug %>_01.jpg" />
 
   <!-- Breadcrumb structured data for SEO -->
