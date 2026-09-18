@@ -17,8 +17,6 @@
   <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&amp;display=swap"
-    rel="preload" as="style" />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&amp;display=swap" rel="stylesheet" />
   
@@ -132,7 +130,7 @@
     </section>
 <% if map_url.to_s != '' %>
     <figure class="map">
-      <a href="<%= map_url %>"
+      <a href="<%= HTMLEntities.new.encode(map_url) %>"
         target="_blank" rel="noopener noreferrer">
         <img src="<%= slug %>_map.png" alt="Map showing <%= map_title %> location (opens in OpenStreetMap)"
           title="<%= map_title %>" width="320" height="240" />
