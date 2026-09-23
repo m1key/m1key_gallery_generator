@@ -132,10 +132,10 @@
     <figure class="map">
       <a href="<%= HTMLEntities.new.encode(map_url) %>"
         target="_blank" rel="noopener noreferrer">
-        <img src="<%= slug %>_map.png" alt="Map showing <%= map_title %> location (opens in OpenStreetMap)"
+        <img src="<%= slug %>_map.png" alt="Map showing <%= map_title %> location"
           title="<%= map_title %>" width="320" height="240" />
       </a>
-      <figcaption class="visually-hidden">Map showing <%= map_title %> location (opens in OpenStreetMap)</figcaption>
+      <figcaption class="visually-hidden">Map showing <%= map_title %> location</figcaption>
     </figure><% end %>
   <% photos.each_with_index do |photo, index| %>
     <article class="photo" id="<%= photo.id %>">
