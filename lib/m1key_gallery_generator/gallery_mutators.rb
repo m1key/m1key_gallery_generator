@@ -15,6 +15,13 @@ module GalleryGenerator
     end
   end
 
+  def add_links_to_small_print
+    lambda do |mutable_viewable_content|
+      mutable_viewable_content.small_print = add_links_to_sources(mutable_viewable_content.small_print)
+      mutable_viewable_content
+    end
+  end
+
   def remove_final_empty_line_from_description
     lambda do |mutable_viewable_content|
       mutable_viewable_content.description = remove_final_empty_line(mutable_viewable_content.description)
