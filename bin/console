@@ -41,6 +41,7 @@ begin
       update_using(
       add_tabs_before_every_description_line(3),
       add_links_to_descriptions,
+      add_links_to_small_print,
       for_each_photo(&add_links_to_descriptions),
       for_each_photo(&remove_final_empty_line_from_description))
 

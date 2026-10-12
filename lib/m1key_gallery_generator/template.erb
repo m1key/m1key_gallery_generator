@@ -127,8 +127,8 @@
       <h2 id="info-heading" class="visually-hidden">About this shoot</h2>
 <%= description -%>
 <% if small_print.to_s != '' %>
-      <p class="smallprint"><%= small_print -%></p><% end %>
-      <p class="smallprint">Uploaded on: <%= upload_date %>. Updated on: <%= update_date %>.</p>
+      <p class="small_print"><%= small_print -%></p><% end %>
+      <p class="small_print">Uploaded on: <%= upload_date %>. Updated on: <%= update_date %>.</p>
     </section>
 <% if map_url.to_s != '' %>
     <figure class="map">
@@ -157,7 +157,7 @@
   <% if sources %>
     <details class="sources" id="sources">
       <summary>Sources</summary>
-      <ul class="smallprint"><% sources.each_with_index do |source, index| %>
+      <ul class="small_print"><% sources.each_with_index do |source, index| %>
         <li><%= index + 1 %>: <a href="<%= HTMLEntities.new.encode(source) %>" target="_blank" rel="noopener noreferrer" class="nav-link"><% if source.length > 100 %><%= HTMLEntities.new.encode(source[0..50]) %>[...]<%= HTMLEntities.new.encode(source[-30..-1]) %><% else %><%= HTMLEntities.new.encode(source) %><% end -%></a></li><% end %>
       </ul>
     </details>

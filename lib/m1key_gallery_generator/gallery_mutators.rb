@@ -17,7 +17,9 @@ module GalleryGenerator
 
   def add_links_to_small_print
     lambda do |mutable_viewable_content|
-      mutable_viewable_content.small_print = add_links_to_sources(mutable_viewable_content.small_print)
+      if mutable_viewable_content.small_print
+        mutable_viewable_content.small_print = add_links_to_sources(mutable_viewable_content.small_print)
+      end
       mutable_viewable_content
     end
   end
