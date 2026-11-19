@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'exifr', '~> 1.5', '>= 1.5.1'
   spec.add_runtime_dependency 'logger', '~> 1.7'
 
-  spec.add_development_dependency 'bundler', '~> 4.0', '>= 4.1.0'
+  spec.add_development_dependency 'bundler', '~> 4.1', '>= 4.1.0'
   spec.add_development_dependency 'rake', '~> 13.4', '>= 13.4.2'
   spec.add_development_dependency 'minitest', '~> 6.1', '>= 6.1.0'
   spec.add_development_dependency 'rspec', '~> 4.0.0.beta1'
