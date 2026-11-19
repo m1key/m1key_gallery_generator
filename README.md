@@ -58,7 +58,7 @@ gem install bundler
 
 This was most recently tested on Windows 11.
 
-Install Ruby 4.0.2 using rubyinstaller.org. Then run:
+Install Ruby 4.0.10-1 using rubyinstaller.org. Then run:
 
 ```
 gem install bundler
