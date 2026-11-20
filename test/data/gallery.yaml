@@ -38,9 +38,9 @@ photos:
           description: Photo taken at night in Bukhara. [3]
           fileNameContains: "0041"
           technicalInfo:
-        - title: "&quot;Samarkand&quot;"
+        - title: "&ldquo;Samarkand&rdquo;"
           description: Samarkand [1] is amazing! [10]
           fileNameContains: "8989"
         - title: Iceland
-          description: What's Iceland doing here?
+          description: What&rsquo;s Iceland doing here?
           fileNameContains: "3302"

@@ -6,7 +6,7 @@ map:
         title: Samarkand, Uzbekistan
 description: |
   <p>
-    These are my photos from Uzbekistan. [1, p. 2-3]
+    These are my photos from Uzbekistan. [1, p. 2&ndash;3]
   </p>
   <p>
     Hope you like them!
@@ -41,23 +41,26 @@ photos:
           description: Samarkand [1] is amazing! [10]
           fileNameContains: "8989"
         - title: Iceland
-          description: What's Iceland doing here?
+          description: What&rsquo;s Iceland doing here?
           fileNameContains: "3302"
         - title: Iceland
-          description: What's Iceland doing here?
+          description: What&rsquo;s Iceland doing here?
           fileNameContains: "3302"
         - title: Iceland
-          description: What's Iceland doing here?
+          description: What&rsquo;s Iceland doing here?
           fileNameContains: "3302"
         - title: Iceland
-          description: What's Iceland doing here?
+          description: What&rsquo;s Iceland doing here?
           fileNameContains: "3302"
         - title: Iceland
-          description: What's Iceland doing here?
+          description: What&rsquo;s Iceland doing here?
           fileNameContains: "3302"
         - title: Iceland
-          description: What's Iceland doing here?
+          description: What&rsquo;s Iceland doing here?
           fileNameContains: "3302"
         - title: Iceland
-          description: What's Iceland doing here?
+          description: What&rsquo;s Iceland doing here?
+          fileNameContains: "3302"
+        - title: Iceland
+          description: What&rsquo;s Iceland doing here?
           fileNameContains: "3302"
