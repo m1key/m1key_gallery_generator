@@ -107,13 +107,13 @@ gem build m1key_gallery_generator.gemspec
 Install the gem.
 
 ```
-gem install m1key_gallery_generator-0.4.0.gem
+gem install m1key_gallery_generator-0.4.1.gem
 ```
 
 In your gallery directory, have a file called `generate.bat` that looks like this:
 
 ```
-ruby c:\Ruby40-x64\lib\ruby\gems\4.0.0\gems\m1key_gallery_generator-0.4.0\bin\console . wait_on_error
+ruby c:\Ruby40-x64\lib\ruby\gems\4.0.0\gems\m1key_gallery_generator-0.4.1\bin\console . wait_on_error
 ```
 
 ## Development
